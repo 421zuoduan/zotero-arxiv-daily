@@ -1,8 +1,10 @@
-name: Send emails daily
+name: Send emails manually
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 22 * * *'
+
+# Daily recommendations are published by OpenClaw at:
+# https://421zuoduan.top/daily-arxiv/
+# Keep this workflow manual to avoid duplicate scheduled email runs.
 
 jobs:
   calculate-and-send:
